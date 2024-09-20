@@ -1,6 +1,6 @@
 (function () {
   const app = document.querySelector(".app");
-  const socket = io();
+  const socket = io("https://chatroom-seven-taupe.vercel.app");
 
   let uname;
 
@@ -11,6 +11,7 @@
       if (username.length === 0) {
         return;
       }
+      ("https://chatroom-seven-taupe.vercel.app");
       socket.emit("newuser", username);
       uname = username;
       app.querySelector(".join-screen").classList.remove("active");
