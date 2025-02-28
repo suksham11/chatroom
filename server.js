@@ -13,7 +13,7 @@ io.on("connection", (socket) => {
   console.log("New user connected");
 
   socket.on("newuser", (username) => {
-    console.log(`${username} has joined`);
+    console.log(`${username} has joined`)
     socket.broadcast.emit("update", `${username} joined the chat`);
   });
 
